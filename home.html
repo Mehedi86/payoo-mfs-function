@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payoo Home</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <main class="min-h-screen flex justify-center items-center">
+        <!-- phone mockup by daisyui -->
+        <div class="mockup-phone">
+            <div class="camera"></div>
+            <div class="display">
+                <div class="artboard artboard-demo phone-3 p-2">
+                    <!-- showing balance -->
+                    <div class="stats shadow">
+                        <div class="stat">
+                            <div class="stat-title">Total Balance</div>
+                            <div id="total-balance" class="stat-value">89400</div>
+                        </div>
+                    </div>
+                    <div class="divider"></div>
+                    <!-- buttons of add money and cash out -->
+                    <div class="grid grid-cols-3 gap-2">
+                        <button id="add-money-show-button" class="btn btn-lg">Add Money</button>
+                        <button id="cash-out-show-button" class="btn btn-lg">Cash Out</button>
+                        <button id="transection-show-button" class="btn btn-lg">Transections</button>
+                        <button id="send-money-show-button" class="btn btn-lg">Send Money</button>
+                        <button class="btn btn-lg">Pay Bill</button>
+                        <button class="btn btn-lg">Gift</button>
+                    </div>
+                    <div class="divider"></div>
+                    <!-- add money form -->
+                    <div id="add-money-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount</span>
+                                </label>
+                                <input id="add-money-amount" type="text" placeholder="enter your amount number" class="input input-bordered" required autocomplete="off" />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin Number</span>
+                                </label>
+                                <input id="add-money-pin" type="password" placeholder="password" class="input input-bordered" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="add-money-button" class="btn btn-primary">Add Money</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- cash out form -->
+                    <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount</span>
+                                </label>
+                                <input id="cash-out-amount" type="text" placeholder="enter your cash out amount" class="input input-bordered" required />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin Number</span>
+                                </label>
+                                <input id="cash-out-pin" type="password" placeholder="enter your pin number" class="input input-bordered" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="cash-out-button" class="btn btn-primary">Cash Out</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- send Money form -->
+                    <div id="send-money-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                        <form class="card-body">
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Amount</span>
+                                </label>
+                                <input id="send-money-input" type="text" placeholder="enter amount" class="input input-bordered" required autocomplete="off" />
+                            </div>
+                            <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">Pin Number</span>
+                                </label>
+                                <input id="send-money-pin" type="password" placeholder="enter your pin" class="input input-bordered" required />
+                            </div>
+                            <div class="form-control mt-6">
+                                <button id="send-money-button" class="btn btn-primary">Send Money</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Transection form -->
+                     <div id="transection-container" class="hidden">
+                        <div class="px-4 py-2 bg-teal-300 rounded-lg">
+                            <h1 class="text-2xl font-bold">Transection History</h1>
+                        </div>
+                     </div>                     
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./utilities.js"></script>
+    <script src="/home.js"></script>
+</body>
+
+</html>
